@@ -209,10 +209,14 @@ body {
     }
 
     .preview.mobile {
-    width: 90vw !important;
+    width: 90vw;
+    max-width: 360px;
     height: auto;
     max-height: none;
-    padding: 1.5rem;
+    scale: 1 !important;
+    rotate: 0deg !important;
+    transform: none !important; /* fully cancel any transforms */
+    margin: 1rem auto;
   }
 }
 
