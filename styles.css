@@ -209,11 +209,11 @@ body {
     }
 
     .preview.mobile {
-        width: 90vw !important;
-        max-width: 90vw !important;
-        scale: 1 !important;
-        rotate: 0deg !important;
-    }
+    width: 90vw !important;
+    height: auto;
+    max-height: none;
+    padding: 1.5rem;
+  }
 }
 
 /* scrollbar styles specific to your preview cards */
