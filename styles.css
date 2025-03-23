@@ -191,8 +191,29 @@ body {
 	}
 }
 .preview.mobile {
-    overflow-y: auto;    
-    max-height: 540px; /* matches your existing card height */
+    max-height: 540px;
+    max-width: 360px;
+    overflow-y: auto;
+    padding: 15px;
+    border: var(--outline-w) solid transparent;
+    outline: var(--outline-w) solid var(--preview-bg);
+    outline-offset: var(--outline-w);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive stacking on small screens */
+@media (max-width: 600px) {
+    .preview__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview.mobile {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        scale: 1 !important;
+        rotate: 0deg !important;
+    }
 }
 
 /* scrollbar styles specific to your preview cards */
