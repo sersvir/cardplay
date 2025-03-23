@@ -45,7 +45,20 @@ body {
 	}
 }
 
+/* Mobile layout: stack cards vertically */
+@media (max-width: 600px) {
+    .preview__container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .preview.mobile {
+        width: 90vw;         /* takes up most of the screen */
+        max-width: 360px;     /* don't exceed mobile max width */
+        scale: 1 !important;  /* ensure it doesn't shrink */
+        rotate: 0deg !important;
+    }
+}
 
 .preview {
 	--bg-pos-y--start: 0;
