@@ -29,20 +29,16 @@ body {
 }
 
 .preview__container {
-	display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+    place-content: center;
+    height: 100%;
+}
 
-	place-items: center;
-	place-content: center;
-
-	height: 100%;
-
-	/* fade out other cards when one is :hover/:focus-within */
-	&:has(:hover, :focus-within) {
-		.preview:not(:hover, :focus) {
-			opacity: 0.4;
-		}
-	}
+/* move this out of nesting */
+.preview__container:has(:hover, :focus-within) .preview:not(:hover, :focus) {
+    opacity: 0.4;
 }
 
 /* Mobile layout: stack cards vertically */
@@ -53,9 +49,9 @@ body {
     }
 
     .preview.mobile {
-        width: 90vw;         /* takes up most of the screen */
-        max-width: 360px;     /* don't exceed mobile max width */
-        scale: 1 !important;  /* ensure it doesn't shrink */
+        width: 90vw;
+        max-width: 360px;
+        scale: 1 !important;
         rotate: 0deg !important;
     }
 }
